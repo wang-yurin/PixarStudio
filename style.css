@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+}
+
+/* root */
+:root {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* layout */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* design */
+body {
+  background-color: black;
+  color: #999;
+}
+
+.main {
+  padding-top: 80px;
+}
+
+.cover {
+  position: relative;
+  height: 30vw;
+  background-image: url(./images/cover1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.9) 85%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: -1;
+}
+
+.cover-title {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2vw;
+  letter-spacing: 0.4em;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sidebar {
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.sidebar-menu {
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+.sidebar-menu-item a {
+  display: block;
+  padding: 5px 20px;
+}
+
+.contents {
+  flex-grow: 1;
+}
+
+.section {
+  min-height: 600px;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  color: white;
+  padding: 40px 0;
+  font-size: 3.5rem;
+  font-family: "Caveat";
+}
+
+.description__container {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.description {
+  flex-grow: 1;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  min-width: 500px;
+}
+
+.description-title {
+  color: coral;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.description-cover {
+  width: 350px;
+}
+
+.movie {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.movie-info {
+  max-width: 170px;
+  background-color: #111;
+  font-size: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movie-info.movie-info_orange {
+  color: orange;
+}
+.movie-info.movie-info_orangered {
+  color: orangered;
+}
+.movie-info.movie-info_purple {
+  color: purple;
+}
+.movie-info.movie-info_white {
+  color: white;
+}
+.movie-info.movie-info_blue {
+  color: dodgerblue;
+}
+.movie-info.movie-info_green {
+  color: greenyellow;
+}
+
+.movie-info-cover {
+  border-bottom: 5px solid currentColor;
+}
+
+.movie-info-title {
+  margin: 15px 10px;
+}
+
+.movie-info-description {
+  margin: 15px 10px;
+  color: #555;
+  font-size: 1.4rem;
+}
+
+.footer {
+  border-top: 1px solid currentColor;
+  padding: 30px;
+}
